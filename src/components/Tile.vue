@@ -1,29 +1,56 @@
 <template>
-  <div class="cell" :style="style">
-    {{x}}, {{y}}
+  <div
+    class="cell"
+    :class="{ 'is-lit': lit }"
+    :style="gridArea">
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    x: {
+    lit: {
+      type: Boolean,
+      required: true,
+      default: false
+    },
+    row: {
       type: Number,
       required: true
     },
-    y: {
+    col: {
       type: Number,
       required: true
     }
   },
-  name: 'tile',
   computed: {
-    style: function () {
-      return `grid-area: ${this.x + 1} / ${this.y + 1} / span 1 / span 1`
+    gridArea: function () {
+      return `grid-area: ${this.row + 1} / ${this.col + 1} / span 1 / span 1`
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+  $primary: #35495e;
+  $accent: #42b983;
+
+  .cell {
+    background-color: $primary;
+    border-radius: 2px;
+    transition: background-color 0.05s ease-in;
+
+    &.is-lit {
+      background-color: $accent;
+
+      &:hover {
+        background-color: lighten($accent, 20);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($primary, 20);
+    }
+  }
 </style>
