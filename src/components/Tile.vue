@@ -1,6 +1,6 @@
 <template>
   <div
-    class="cell"
+    class="tile"
     :class="{ 'is-lit': lit }"
     :style="gridArea">
   </div>
@@ -35,7 +35,7 @@ export default {
   $primary: #35495e;
   $accent: #42b983;
 
-  .cell {
+  .tile {
     background-color: $primary;
     border-radius: 2px;
     transition: background-color 0.05s ease-in;
