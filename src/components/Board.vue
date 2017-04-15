@@ -102,7 +102,13 @@ export default {
     display: grid;
     grid-template: 1fr / 1fr;
     grid-gap: 0.5rem;
-    width: 400px;
-    height: 400px;
+    width: 80vw;
+    height: 80vw;
+    margin: 1rem;
+
+    @media (min-width: 600px) {
+      width: 400px;
+      height: 400px;
+    }
   }
 </style>
