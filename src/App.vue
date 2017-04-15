@@ -6,6 +6,11 @@
     </div>
 
     <div class="sidebar">
+      <ul class="links">
+        <li><router-link to='/'>Play</router-link></li>
+        <li><router-link to='/create'>Create</router-link></li>
+        <li><router-link to='/about'>About</router-link></li>
+      </ul>
     </div>
 
     <div class="main">

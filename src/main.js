@@ -6,8 +6,6 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.component('tile', require('./components/Tile.vue'))
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
