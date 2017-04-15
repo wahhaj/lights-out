@@ -13,7 +13,7 @@
     </div>
 
     <div class="footer">
-      <p>Created by Wahhaj Ali</p>
+      <p>Created by <a href="https://github.com/wahhaj">Wahhaj Ali</a></p>
     </div>
   </div>
 </template>
