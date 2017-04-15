@@ -1,7 +1,7 @@
 {
   "name": "lights-out",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "The classic Lights Out made with Vue.js using CSS Grid for layout.",
   "author": "Wahhaj Ali <wahhajj@gmail.com>",
   "private": true,
   "scripts": {
