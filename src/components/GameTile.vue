@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   $primary: #35495e;
   $accent: #42b983;
 

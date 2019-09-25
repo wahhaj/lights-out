@@ -4,7 +4,7 @@
     <div class="board" :style="gridTemplate">
       <template v-for="(row, r) in boardState">
         <template v-for="(col, c) in row">
-          <tile :lit="col" :row="r" :col="c" @click.native="makeMove(r,c)"></tile>
+          <game-tile :lit="col" :row="r" :col="c" v-bind:key="`${r},${c}`" @click.native="makeMove(r,c)"/>
         </template>
       </template>
     </div>
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import Tile from './Tile.vue'
+import GameTile from '@/components/GameTile.vue'
 
 export default {
 
   components: {
-    Tile
+    GameTile
   },
 
   props: {
@@ -54,7 +54,7 @@ export default {
     },
     remaining: function () {
       return [].concat(...this.boardState) // flatten boardState array
-          .filter((lit) => lit).length // count number of `true` values
+        .filter((lit) => lit).length // count number of `true` values
     }
   },
 
