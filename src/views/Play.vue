@@ -2,17 +2,17 @@
   <div class="game">
     <button @click="newGame">New Game</button>
 
-    <board :size="size" :initialState="boardState"></board>
+    <game-board :size="size" :initialState="boardState"/>
   </div>
 </template>
 
 <script>
-import Board from '@/components/Board.vue'
+import GameBoard from '@/components/GameBoard.vue'
 
 export default {
 
   components: {
-    Board
+    GameBoard
   },
 
   data () {
@@ -49,7 +49,7 @@ export default {
       }
 
       // Transition to play route with new boardState in url
-      this.$router.replace({name: 'play', params: { board: btoa(JSON.stringify(boardState)) }})
+      this.$router.replace({ name: 'play', params: { board: btoa(JSON.stringify(boardState)) } })
     },
 
     makeMove: function (board, row, col) {

@@ -14,7 +14,7 @@
     </div>
 
     <div class="main">
-      <router-view></router-view>
+      <router-view/>
     </div>
 
     <div class="footer">
@@ -22,12 +22,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'app'
-}
-</script>
 
 <style lang="scss">
   $primary: #35495e;
@@ -48,10 +42,10 @@ export default {
     grid-auto-rows: minmax(100px, auto);
 
     grid-template-areas:
-     "header"
-     "sidebar"
-     "board"
-     "footer";
+      "header"
+      "sidebar"
+      "board"
+      "footer";
     @media (min-width: 600px) {
       grid-template-columns: 200px 1fr;
       grid-template-areas:
